@@ -1,6 +1,6 @@
 package com.meanlightk.study;
 
-import com.meanlightk.study.repository.JdbcMemberRepository;
+import com.meanlightk.study.repository.JdbcTemplateMemberRepository;
 import com.meanlightk.study.repository.MemberRepository;
 import com.meanlightk.study.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
 
     }
 
