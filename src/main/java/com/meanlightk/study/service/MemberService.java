@@ -2,16 +2,19 @@ package com.meanlightk.study.service;
 
 import com.meanlightk.study.domain.Member;
 import com.meanlightk.study.repository.MemberRepository;
-import com.meanlightk.study.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
-    // Dependency Injection
     private final MemberRepository memberRepository;
 
+
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

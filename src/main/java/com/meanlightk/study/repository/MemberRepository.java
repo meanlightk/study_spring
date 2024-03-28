@@ -1,6 +1,7 @@
 package com.meanlightk.study.repository;
 
 import com.meanlightk.study.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
