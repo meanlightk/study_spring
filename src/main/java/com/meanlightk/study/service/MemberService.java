@@ -24,7 +24,6 @@ public class MemberService {
      * 회원가입
      */
     public Long join(Member member) {   // join(가입)을 하면 중복회원 검증하고 통과하면 저장
-
         validateDuplicateMember(member); // 중복 회원 검증
         memberRepository.save(member);
         return member.getId();
